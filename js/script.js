@@ -14,19 +14,17 @@ for (let i = 0; i < 2; i++) {
     let a = prompt("Один из просмотренных фильмов?"),
         b = prompt("На сколько вы его оцените?");
         
-    if (a != "" && a != null && a.length > 50 && b != "" && b != null) {
+    if (a != '' && a != null && b != '' && b != null) {
         personalMovieDB.movies[a]=b;
+        console.log('---T---');
     } else {
-        console.log('number of films was entered uncorrectly');
+        console.log('---F---');
+        i--;
     }
 }
 
-
-
-// if (numberOfFilms == "" || isNaN(numberOfFilms) || numberOfFilms == undefined || numberOfFilms.length > 50) {
-//     numberOfFilms++;
-// } else {
-//     console.log('number of films was entered correctly');
-// }
+if (personalMovieDB.count > 10) {
+    console.log('<10');
+} elseif {}
 
 console.log(personalMovieDB);
